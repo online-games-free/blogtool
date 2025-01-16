@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Case Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Convert Case Pro</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Text Input</h2>
+            </div>
+            <div class="card-content">
+                <textarea id="inputText" placeholder="Enter your text here..."></textarea>
+                <div id="textInfo" class="text-info"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Case Conversion</h2>
+            </div>
+            <div class="card-content">
+                <div class="button-grid">
+                    <button onclick="convertCase('upper')">UPPERCASE</button>
+                    <button onclick="convertCase('lower')">lowercase</button>
+                    <button onclick="convertCase('title')">Title Case</button>
+                    <button onclick="convertCase('sentence')">Sentence case</button>
+                    <button onclick="convertCase('capitalize')">Capitalize Case</button>
+                    <button onclick="convertCase('link')">link-case</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Text Operations</h2>
+            </div>
+            <div class="card-content">
+                <div class="input-group">
+                    <input type="text" id="addText" placeholder="Text to add">
+                    <button onclick="handleAddText()">Add Text</button>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="removeText" placeholder="Text to remove">
+                    <button onclick="handleRemoveText()">Remove Text</button>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="replaceFrom" placeholder="Text to replace">
+                    <input type="text" id="replaceTo" placeholder="Replace with">
+                    <button onclick="handleReplaceText()">Replace Text</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Convert Case Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
