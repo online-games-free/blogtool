@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Comma Separating Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Free Comma Separating Tool</h1>
+        
+        <div class="input-group">
+            <label for="input">Enter your data (space-separated):</label>
+            <textarea id="input" placeholder="e.g. 1 2 3 4 5"></textarea>
+            <button id="clearInput" class="secondary-button">Clear Input</button>
+        </div>
+
+        <div class="options">
+            <div class="separator-group">
+                <label for="separator">Choose separator:</label>
+                <select id="separator">
+                    <option value=",">Comma (,)</option>
+                    <option value=":">Colon (:)</option>
+                    <option value=";">Semicolon (;)</option>
+                    <option value='"'>Double Quote (")</option>
+                    <option value=" ">Space</option>
+                    <option value="|">Pipe (|)</option>
+                    <option value="\n">New Line</option>
+                </select>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="separateByLine">
+                <label for="separateByLine">Separate by line</label>
+            </div>
+        </div>
+
+        <button id="separateButton">Separate Now</button>
+
+        <div class="input-group">
+            <label for="output">Result:</label>
+            <textarea id="output" readonly></textarea>
+            <div class="button-group">
+                <button id="copyOutput" class="secondary-button">Copy Result</button>
+                <button id="clearOutput" class="secondary-button">Clear Result</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
