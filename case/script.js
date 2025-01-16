@@ -1,3 +1,14 @@
+// DOM elements
+const inputText = document.getElementById('inputText');
+const textInfo = document.getElementById('textInfo');
+const addTextInput = document.getElementById('addText');
+const removeTextInput = document.getElementById('removeText');
+const replaceFromInput = document.getElementById('replaceFrom');
+const replaceToInput = document.getElementById('replaceTo');
+
+// Event listeners
+inputText.addEventListener('input', updateTextInfo);
+
 // Utility functions
 function convertCase(text, caseType) {
     switch (caseType) {
@@ -30,17 +41,6 @@ function replaceText(text, from, to) {
     return text.replace(new RegExp(from, 'g'), to);
 }
 
-// DOM elements
-const inputText = document.getElementById('inputText');
-const textInfo = document.getElementById('textInfo');
-const addTextInput = document.getElementById('addText');
-const removeTextInput = document.getElementById('removeText');
-const replaceFromInput = document.getElementById('replaceFrom');
-const replaceToInput = document.getElementById('replaceTo');
-
-// Event listeners
-inputText.addEventListener('input', updateTextInfo);
-
 // Functions
 function updateTextInfo() {
     const text = inputText.value;
@@ -49,7 +49,7 @@ function updateTextInfo() {
     textInfo.textContent = `Characters: ${charCount} | Words: ${wordCount}`;
 }
 
-function convertCase(caseType) {
+function handleConvertCase(caseType) {
     inputText.value = convertCase(inputText.value, caseType);
     updateTextInfo();
 }
