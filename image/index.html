@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Image Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Professional Image Converter</h1>
+        <div id="drop-area" class="drop-area">
+            <p>Drag & drop image(s) here, or click to select</p>
+            <input type="file" id="fileInput" accept="image/*" multiple hidden>
+        </div>
+        <div id="preview-container" class="preview-container" hidden>
+            <div id="preview-scroll" class="preview-scroll"></div>
+        </div>
+        <div class="button-container">
+            <button id="convertWebP" class="convert-btn" data-format="webp">Convert to WebP</button>
+            <button id="convertJPEG" class="convert-btn" data-format="jpeg">Convert to JPEG</button>
+            <button id="convertPNG" class="convert-btn" data-format="png">Convert to PNG</button>
+        </div>
+        <div id="selected-format" class="selected-format" hidden>
+            Selected format: <span id="format-text"></span>
+        </div>
+        <button id="downloadBtn" class="download-button" hidden>Download Converted Images</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/browser-image-compression/2.0.0/browser-image-compression.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
