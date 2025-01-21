@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWG/PDF Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>DWG/PDF Converter</h1>
+        <div class="converter">
+            <div class="toggle-container">
+                <span>DWG to PDF</span>
+                <label class="switch">
+                    <input type="checkbox" id="conversionToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span>PDF to DWG</span>
+            </div>
+            <div class="file-input-container">
+                <input type="file" id="fileInput" accept=".dwg,.pdf" />
+                <label for="fileInput" class="file-label">Choose File</label>
+                <span id="fileName">No file chosen</span>
+            </div>
+            <button id="convertBtn">Convert</button>
+        </div>
+        <div id="status"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
